@@ -49,9 +49,6 @@
 [submodule "bundle/message-recall"]
 	path = bundle/message-recall
 	url = https://github.com/vim-scripts/MessageRecall
-[submodule "bundle/gundo"]
-	path = bundle/gundo
-	url = https://github.com/sjl/gundo.vim.git
 [submodule "bundle/l9"]
 	path = bundle/l9
 	url = https://github.com/vim-scripts/L9
