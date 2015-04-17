@@ -215,7 +215,8 @@ nnoremap <Tab>j zMzjzvzz
 nnoremap <Tab>k zMzkzv[zzz
 
 "Hardtime - do not user hjkl 
-let g:hardtime_default_on = 1
+"By default it is 0, changed in vimrc.local
+let g:hardtime_default_on = 0
 let g:hardtime_timeout = 1000
 let g:hardtime_maxcount = 2
 let g:hardtime_ignore_quickfix = 1
