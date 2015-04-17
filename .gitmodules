@@ -136,3 +136,9 @@
 [submodule "bundle/vmath"]
 	path = bundle/vmath
 	url = https://github.com/nixon/vim-vmath
+[submodule "bundle/camel-case-motion"]
+	path = bundle/camel-case-motion
+	url = https://github.com/bkad/CamelCaseMotion
+[submodule "bundle/hardtime"]
+	path = bundle/hardtime
+	url = https://github.com/takac/vim-hardtime
