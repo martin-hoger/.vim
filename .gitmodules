@@ -142,3 +142,15 @@
 [submodule "bundle/hardtime"]
 	path = bundle/hardtime
 	url = https://github.com/takac/vim-hardtime
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim
+[submodule "bundle/ctrl-py-matcher"]
+	path = bundle/ctrl-py-matcher
+	url = https://github.com/FelikZ/ctrlp-py-matcher
+[submodule "bundle/fugitive-merginal"]
+	path = bundle/fugitive-merginal
+	url = https://github.com/idanarye/vim-merginal
+[submodule "bundle/php-refactoring-toolbox"]
+	path = bundle/php-refactoring-toolbox
+	url = https://github.com/adoy/vim-php-refactoring-toolbox
