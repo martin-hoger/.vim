@@ -9,7 +9,7 @@
 
     cd ~
     git clone https://github.com/martin-hoger/.vim
-    ln -s $TARGET_DIR/vimrc .vimrc
+    ln -s .vim/vimrc .vimrc
     
     cd ~/.vim
     git submodule init && git submodule update
