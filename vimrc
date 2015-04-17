@@ -60,7 +60,7 @@ set mat=2 " how many tenths of a second to blink when matching brackets
 set nofoldenable
 set virtualedit=onemore         " allow for cursor beyond last character
 set spell                       " spell checking on
-set spellfile=~/.vim/dict.add
+set spellfile=~/.vim/spell/dict.add
 set spelllang=en_us,cs
 set mousemodel=popup
 set scrolloff=5               " keep at least 5 lines above/below
@@ -982,9 +982,6 @@ augroup vimrc_all
     "Command window
     au CmdwinEnter * setlocal nonumber
     "au CmdwinEnter * setlocal nonumber | map <buffer> <F5> <CR>q:
-
-    "Git commit messages
-    autocmd Filetype gitcommit setlocal spell
 
     " Reload page when editing phtml or module file
     au BufWritePost *.phtml,*.module :BLReloadPage
