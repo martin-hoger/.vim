@@ -1,0 +1,406 @@
+snippet .addClass
+options word
+	${1}.addClass("${2:class name}")${3}
+snippet .after
+options word
+	${1}.after("${2:Some text <b>and bold!</b>}")${3}
+snippet $.ajax
+alias   ajax
+	$.ajax({
+		url: "${1:mydomain.com/url}",
+		type: "${2:POST}",
+		dataType: "${3:xml/html/script/json}",
+		data: $.param( $("${4:Element or Expression}") ),
+		complete: function (jqXHR, textStatus) {
+			${5:// callback}
+		},
+		success: function (data, textStatus, jqXHR) {
+			${6:// success callback}
+		},
+		error: function (jqXHR, textStatus, errorThrown) {
+			${7:// error callback}
+		}
+	});
+snippet $.get
+	$.get("${1:mydomain.com/url}",
+		${2:{ param1: value1 },}
+		function (data, textStatus, jqXHR) {
+			${3:// success callback}
+		}
+	);
+snippet $.post
+	$.post("${1:mydomain.com/url}",
+		${2:{ param1: value1 },}
+		function (data, textStatus, jqXHR) {
+			${3:// success callback}
+		}
+	);
+snippet .animate
+options word
+	${1}.animate({${2:param1: value1, param2: value2}}, ${3:speed})${4}
+snippet .append
+options word
+	${1}.append("${2:Some text <b>and bold!</b>}")${3}
+snippet .appendTo
+options word
+	${1}.appendTo("${2:selector expression}")${3}
+snippet .attr
+options word
+	${1}.attr("${2:attribute}", "${3:value}")${4}
+snippet .attrm
+options word
+	${1}.attr({"${2:attr1}": "${3:value1}", "${4:attr2}": "${5:value2}"})${6}
+snippet .before
+options word
+	${1}.before("${2:Some text <b>and bold!</b>}")${3}
+snippet .bind
+options word
+	${1}.bind("${2:event name}", function (${3:e}) {
+		${4:// event handler}
+	});
+snippet .blur
+options word
+	${1}.blur(function (${2:e}) {
+		${3:// event handler}
+	});
+snippet .disable
+options word
+	${1:callbacks}.disable()${2}
+snippet .empty
+options word
+	${1:callbacks}.empty()${2}
+snippet .change
+options word
+	${1}.change(function (${2:e}) {
+		${3:// event handler}
+	});
+snippet .children
+options word
+	${1}.children("${2:selector expression}")${3}
+snippet .click
+options word
+	${1}.click(function (${2}) {
+		${3}
+	});
+snippet .clone
+options word
+	${1}.clone()${2}
+snippet .css
+options word
+	${1}.css("${2:attribute}", "${3:value}")${4}
+snippet .data
+options word
+	${1}.data(${2})${3}
+snippet .delay
+options word
+	${1}.delay("${2:slow/400/fast}"${3:, "queue name"})${4}
+snippet .each
+options word
+	${1}.each(function (${2}) {
+		${3}
+	});
+snippet el
+options word
+	$("${1}"${2:, {}})${3}
+snippet .fadeIn
+options word
+	${1}.fadeIn("${2:slow/400/fast}")${3}
+snippet .fadeOut
+options word
+	${1}.fadeOut("${2:slow/400/fast}")${3}
+snippet .filter
+options word
+	${1}.filter("${2:selector expression}")${3}
+snippet .find
+options word
+	${1}.find("${2:selector expression}")${3}
+snippet .get
+options word
+	${1}.get(${2:element index})${3}
+snippet .hasClass
+options word
+	${1}.hasClass("${2:className}")${3}
+snippet .hasData
+	$.hasData("${1:selector expression}");
+snippet .height
+options word
+	${1}.height(${2:integer})${3}
+snippet .hide
+options word
+	${1}.hide("${2:slow/400/fast}")${3}
+snippet .hover
+options word
+	${1}.hover(function (${2:e}) {
+		${3:// event handler}
+	}, function ($2) {
+		${4:// event handler}
+	});${5}
+snippet .html
+options word
+	${1}.html("${2:Some text <b>and bold!</b>}")${3}
+snippet .insertAfter
+options word
+	${1}.insertAfter("${2:selector expression}")${3}
+snippet .insertBefore
+options word
+	${1}.insertBefore("${2:selector expression}")${3}
+snippet .is
+options word
+	${1}.is("${2:selector expression}")${3}
+snippet isarr
+	$.isArray(${1})${2}
+snippet isempty
+	$.isEmptyObject(${1})${2}
+snippet isfunc
+	$.isFunction(${1})${2}
+snippet isnum
+	$.isNumeric(${1:value})${2}
+snippet isobj
+	$.isPlainObject(${1})${2}
+snippet iswin
+	$.isWindow(${1})${2}
+snippet isxml
+	$.isXMLDoc(${1:node})${2}
+snippet ss
+alias   $
+	$("${1:selector}")${2}
+snippet .keydown
+options word
+	${1}.keydown(function (${2:e}) {
+		${3:// event handler}
+	});
+snippet .keypress
+options word
+	${1}.keypress(function (${2:e}) {
+		${3:// event handler}
+	});
+snippet .keyup
+options word
+	${1}.keyup(function (${2:e}) {
+		${3:// event handler}
+	});
+snippet .live
+options word
+	${1}.live("${2:events}", function (${3:e}) {
+		${4:// event handler}
+	});
+snippet .load
+options word
+	${1}.load("${2:mydomain.com/url}",
+		${2:{ param1: value1 },}
+		function (responseText, textStatus, xhr) {
+			${3:// success callback}
+		}
+	});
+snippet .map
+options word
+	${1}.map(function (${2:index}, ${3:element}) {
+		${4:// callback}
+	});
+snippet .next
+options word
+	${1}.next("${2:selector expression}")${3}
+snippet .nextAll
+options word
+	${1}.nextAll("${2:selector expression}")${3}
+snippet .nextUntil
+options word
+	${1}.nextUntil("${2:selector expression}"${3:, "filter expression"})${4}
+snippet .offset
+options word
+	${1}.offset()${2}
+snippet .on
+options word
+	${1}.on("${2:events}", "${3:selector expression}", function (${4:e}) {
+		${5:// event handler}
+	});
+snippet .one
+options word
+	${1}.one("${2:event name}", function (${3:e}) {
+		${4:// event handler}
+	});
+snippet .parent
+options word
+	${1}.parent("${2:selector expression}")${3}
+snippet .parents
+options word
+	${1}.parents("${2:selector expression}")${3}
+snippet parsejson
+	$.parseJSON(${1:data})${2}
+snippet parsexml
+	$.parseXML(${1:data})${2}
+snippet .position
+options word
+	${1}.position()${2}
+snippet .prepend
+options word
+	${1}.prepend("${2:Some text <b>and bold!</b>}")${3}
+snippet .prependTo
+options word
+	${1}.prependTo("${2:selector expression}")${3}
+snippet .prev
+options word
+	${1}.prev("${2:selector expression}")${3}
+snippet .prevAll
+options word
+	${1}.prevAll("${2:selector expression}")${3}
+snippet .promise
+options word
+	${1}.promise(${2:"fx"}, ${3:target})${4}
+snippet .prop
+options word
+	${1}.prop("${2:property name}")${3}
+snippet .pushStack
+options word
+	${1}.pushStack(${2:elements})${3}
+snippet .queue
+options word
+	${1}.queue(${2:name}${3:, newQueue})${4}
+snippet ready
+	$(function () {
+		${1}
+	});
+snippet .removeClass
+options word
+	${1}.removeClass("${2:class name}")${3}
+snippet .replaceAll
+options word
+	${1}.replaceAll(${2:target})${3}
+snippet .replaceWith
+options word
+	${1}.replaceWith(${2:content})${3}
+snippet .reset
+options word
+	${1}.reset(function (${2:e}) {
+		${3:// event handler}
+	});
+snippet .resize
+options word
+	${1}.resize(function (${2:e}) {
+		${3:// event handler}
+	});
+snippet .scroll
+options word
+	${1}.scroll(function (${2:e}) {
+		${3:// event handler}
+	});
+snippet .scrolll
+options word
+	${1}.scrollLeft(${2:value})${3}
+snippet .scrollt
+options word
+	${1}.scrollTop(${2:value})${3}
+snippet .sdown
+options word
+	${1}.slideDown("${2:slow/400/fast}")${3}
+snippet .sdownc
+options word
+	${1}.slideDown("${2:slow/400/fast}", function () {
+		${3:// callback};
+	});
+snippet .select
+options word
+	${1}.select(function (${2:e}) {
+		${3:// event handler}
+	});
+snippet .serialize
+options word
+	${1}.serialize()${2}
+snippet .serializea
+options word
+	${1}.serializeArray()${2}
+snippet .show
+options word
+	${1}.show("${2:slow/400/fast}")${3}
+snippet .showc
+options word
+	${1}.show("${2:slow/400/fast}", function () {
+		${3:// callback}
+	});
+snippet .sib
+options word
+	${1}.siblings("${2:selector expression}")${3}
+snippet .size
+options word
+	${1}.size()${2}
+snippet .slice
+options word
+	${1}.slice(${2:start}${3:, end})${4}
+snippet .stoggle
+options word
+	${1}.slideToggle("${2:slow/400/fast}")${3}
+snippet .stop
+options word
+	${1}.stop("${2:queue}", ${3:false}, ${4:false})${5}
+snippet .submit
+options word
+	${1}.submit(function (${2:e}) {
+		${3:// event handler}
+	});
+snippet .slideUp
+options word
+	${1}.slideUp("${2:slow/400/fast}")${3}
+snippet .slideDown
+options word
+	${1}.slideUp("${2:slow/400/fast}", function () {
+		${3:// callback};
+	});
+snippet .text
+options word
+	${1}.text(${2:"some text"})${3}
+snippet this
+	$(this)${1}
+snippet .toarr
+options word
+	${1}.toArray()
+snippet .toggle
+options word
+	${1}.toggle(function (${2:e}) {
+		${3:// event handler}
+	}, function ($2) {
+		${4:// event handler}
+	});
+	${4}
+snippet .togclass
+options word
+	${1}.toggleClass("${2:class name}")${3}
+snippet .togsh
+options word
+	${1}.toggle("${2:slow/400/fast}")${3}
+snippet .trig
+options word
+	${1}.trigger("${2:event name}")${3}
+snippet .trigh
+options word
+	${1}.triggerHandler("${2:event name}")${3}
+snippet trim
+	$.trim(${1:str})${2}
+snippet type
+	$.type(${1})${2}
+snippet .unbind
+	${1}.unbind("${2:event name}")${3}
+snippet .undele
+options word
+	${1}.undelegate(${2:selector expression}, ${3:event}, ${4:handler})${5}
+snippet .unload
+options word
+	${1}.unload(function (${2:e}) {
+		${3:// event handler}
+	});
+snippet .unwrap
+options word
+	${1}.unwrap()${2}
+snippet .val
+options word
+	${1}.val("${2:text}")${3}
+snippet .width
+options word
+	${1}.width(${2:integer})${3}
+snippet .wrap
+options word
+	${1}.wrap("${2}")${3}
+snippet fn
+options word
+        jQuery.fn.${1} = function() {
+                ${2}
+        };

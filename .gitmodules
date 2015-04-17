@@ -1,0 +1,138 @@
+[submodule "bundle/accelerated-smooth-scroll"]
+	path = bundle/accelerated-smooth-scroll
+	url = https://github.com/yonchu/accelerated-smooth-scroll
+[submodule "bundle/ack"]
+	path = bundle/ack
+	url = https://github.com/mileszs/ack.vim
+[submodule "bundle/activity-log"]
+	path = bundle/activity-log
+	url = https://github.com/AD7six/vim-activity-log
+[submodule "bundle/airline"]
+	path = bundle/airline
+	url = https://github.com/bling/vim-airline
+[submodule "bundle/brolink"]
+	path = bundle/brolink
+	url = https://github.com/jaxbot/brolink.vim
+[submodule "bundle/cdo"]
+	path = bundle/cdo
+	url = https://github.com/Peeja/vim-cdo
+[submodule "bundle/ctrlspace"]
+	path = bundle/ctrlspace
+	url = https://github.com/szw/vim-ctrlspace
+[submodule "bundle/dbext"]
+	path = bundle/dbext
+	url = https://github.com/vim-scripts/dbext.vim
+[submodule "bundle/delimit-mate"]
+	path = bundle/delimit-mate
+	url = https://github.com/Raimondi/delimitMate.git
+[submodule "bundle/easy-align"]
+	path = bundle/easy-align
+	url = https://github.com/junegunn/vim-easy-align
+[submodule "bundle/easymotion"]
+	path = bundle/easymotion
+	url = https://github.com/Lokaltog/vim-easymotion
+[submodule "bundle/eval-selection"]
+	path = bundle/eval-selection
+	url = https://github.com/vim-scripts/EvalSelection.vim
+[submodule "bundle/exchange"]
+	path = bundle/exchange
+	url = https://github.com/tommcdo/vim-exchange
+[submodule "bundle/expand"]
+	path = bundle/expand
+	url = https://github.com/Wolfy87/vim-expand
+[submodule "bundle/fasd"]
+	path = bundle/fasd
+	url = https://github.com/amiorin/vim-fasd
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "bundle/message-recall"]
+	path = bundle/message-recall
+	url = https://github.com/vim-scripts/MessageRecall
+[submodule "bundle/gundo"]
+	path = bundle/gundo
+	url = http://github.com/sjl/gundo.vim.git
+[submodule "bundle/l9"]
+	path = bundle/l9
+	url = https://github.com/vim-scripts/L9
+[submodule "bundle/matchit"]
+	path = bundle/matchit
+	url = https://github.com/tmhedberg/matchit
+[submodule "bundle/neocomplete"]
+	path = bundle/neocomplete
+	url = https://github.com/Shougo/neocomplete.vim
+[submodule "bundle/neosnippet"]
+	path = bundle/neosnippet
+	url = git://github.com/Shougo/neosnippet.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "bundle/patterns-on-text"]
+	path = bundle/patterns-on-text
+	url = https://github.com/vim-scripts/PatternsOnText
+[submodule "bundle/phpcomplete"]
+	path = bundle/phpcomplete
+	url = https://github.com/shawncplus/phpcomplete.vim.git
+[submodule "bundle/php-correct-indenting"]
+	path = bundle/php-correct-indenting
+	url = https://github.com/vim-scripts/PHP-correct-Indenting
+[submodule "bundle/phpdoc"]
+	path = bundle/phpdoc
+	url = https://github.com/stephpy/vim-phpdoc
+[submodule "bundle/prefixer"]
+	path = bundle/prefixer
+	url = https://github.com/vim-scripts/prefixer.vim.git
+[submodule "bundle/quickfix-reflector"]
+	path = bundle/quickfix-reflector
+	url = https://github.com/vim-scripts/quickfix-reflector.vim
+[submodule "bundle/vim-ragtag"]
+	path = bundle/vim-ragtag
+	url = https://github.com/tpope/vim-ragtag.git
+[submodule "bundle/vim-repeat"]
+	path = bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic
+[submodule "bundle/table-mode"]
+	path = bundle/table-mode
+	url = https://github.com/dhruvasagar/vim-table-mode
+[submodule "bundle/tcomment"]
+	path = bundle/tcomment
+	url = https://github.com/tomtom/tcomment_vim
+[submodule "bundle/textobj-brace"]
+	path = bundle/textobj-brace
+	url = https://github.com/Julian/vim-textobj-brace
+[submodule "bundle/textobj-comment"]
+	path = bundle/textobj-comment
+	url = https://github.com/glts/vim-textobj-comment
+[submodule "bundle/textobj-user"]
+	path = bundle/textobj-user
+	url = https://github.com/kana/vim-textobj-user
+[submodule "bundle/textobj-parameter"]
+	path = bundle/textobj-parameter
+	url = https://github.com/sgur/vim-textobj-parameter
+[submodule "bundle/textobj-php"]
+	path = bundle/textobj-php
+	url = https://github.com/akiyan/vim-textobj-php
+[submodule "bundle/textobj-space"]
+	path = bundle/textobj-space
+	url = https://github.com/saihoooooooo/vim-textobj-space
+[submodule "bundle/textobj-variable-segment"]
+	path = bundle/textobj-variable-segment
+	url = https://github.com/Julian/vim-textobj-variable-segment
+[submodule "bundle/tlib"]
+	path = bundle/tlib
+	url = https://github.com/vim-scripts/tlib
+[submodule "bundle/vdebug"]
+	path = bundle/vdebug
+	url = https://github.com/joonty/vdebug
+[submodule "bundle/ex-visincr"]
+	path = bundle/ex-visincr
+	url = https://github.com/exvim/ex-visincr
+[submodule "bundle/vmath"]
+	path = bundle/vmath
+	url = https://github.com/nixon/vim-vmath

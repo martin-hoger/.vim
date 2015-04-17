@@ -1,0 +1,107 @@
+# Shebang. Executing bash via /usr/bin/env makes scripts more portable.
+snippet #!
+	#!/usr/bin/env bash
+	
+snippet if
+	if [[ ${1:condition} ]]; then
+		${2:#statements}
+        else
+	fi
+snippet elif
+	elif [[ ${1:condition} ]]; then
+		${2:#statements}
+snippet for
+	for (( ${2:i} = 0; $2 < ${1:count}; $2++ )); do
+		${3:#statements}
+	done
+snippet fori
+	for ${1:needle} in ${2:haystack} ; do
+		${3:#statements}
+	done
+snippet wh
+alias while
+	while [[ ${1:condition} ]]; do
+		${2:#statements}
+	done
+snippet while-ls
+        ls -1 * | while read LINE
+        do
+                echo $LINE
+        done
+snippet until
+	until [[ ${1:condition} ]]; do
+		${2:#statements}
+	done
+snippet case
+	case ${1:word} in
+		${2:pattern})
+			${3};;
+	esac
+snippet go 
+	while getopts '${1:o}' ${2:opts} 
+	do 
+		case $$2 in
+		${3:o0})
+			${4:#staments};;
+		esac
+	done
+snippet func
+        ${1}() {
+                ${2}
+        }
+snippet bc 
+        echo $(echo "scale=2; ${1} / ${2}" | bc)
+# Set SCRIPT_DIR variable to directory script is located.
+snippet sdir
+alias   script_dir
+alias   SCRIPT_DIR
+	SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+# getopt
+snippet script
+        #!/bin/bash -e
+        #    DESCRIPTION, help here
+        #
+        ###############################################################################
+        set -e          # exit on command errors (so you MUST handle exit codes properly!)
+        set -o pipefail # capture fail exit codes in piped commands
+        # set -x         # execution tracing debug messages
+        
+        # Get command info
+        CMD_PWD=$(pwd)
+        CMD="$0"
+        CMD_DIR="$(cd "$(dirname "$CMD")" && pwd)"
+        
+        # Defaults and command line options
+        [ "$VERBOSE" ]  ||  VERBOSE=
+        [ "$DEBUG" ]    ||  DEBUG=
+        #Set debug
+        [ "$DEBUG" ] && set -x
+        
+        # Basic helpers
+        out() { echo "$(date +%Y%m%dT%H%M%SZ): $*"; }
+        err() { out "$*" 1>&2; }
+        vrb() { [ ! "$VERBOSE" ] || out "$@"; }
+        dbg() { [ ! "$DEBUG" ] || err "$@"; }
+        die() { err "EXIT: $1" && [ "$2" ] && [ "$2" -ge 0 ] && exit "$2" || exit 1; }
+        usage() { [ "$0" = "bash" ] || sed '2,/^##/p;d' "$0"; echo "$*"; exit 1; }
+        
+        ###############################################################################
+        
+        # Validate inpup
+        [ "$1" = "--help" -o "$1" = "-h" -o "$1" = "" ] && usage ""
+# Print constant size
+snippet printf
+	printf "%-${1}.${1}s" "${2}"
+snippet sed
+        sed -r "s/${1}/${2}/"
+snippet sed-groups
+        sed -r "s/^.*(${1}).*$/\1/"
+snippet sql-query
+        DB_ROW=$(echo "SELECT * FROM ${1} WHERE ${2}" | mysql ${3:db} | tail -n 1)
+snippet sql-query-rows
+        DB_ROW=$(echo "SELECT * FROM ${1} WHERE ${2}" | mysql ${3:db} | tail -n 1)
+        ROW1=$(echo "$DB_ROW" | cut -f 1)
+        ROW2=$(echo "$DB_ROW" | cut -f 2)
+        
+        
+        

@@ -1,0 +1,74 @@
+" Fuknce prepíná mezi namapovanou klavesnicí a klasickou.
+function! g:czechMapToggle()
+    let keyList = [
+                \ ["ůě", "@"],
+                \ ["ůš", "#"],
+                \ ["ůč", "$"],
+                \ ["ůř", "%"],
+                \ ["ůž", "^"],
+                \ ["ůý", "&"],
+                \ ["ůá", "*"],
+                \ ["ůí", "{"],
+                \ ["ůé", "}"],
+                \ ["ú", "("],
+                \ ["ůa", "&"],
+                \ ["ůb", "{"],
+                \ ["ůc", "["],
+                \ ["ůd", "@"],
+                \ ["ůe", "</"],
+                \ ["ůe", "="],
+                \ ["ůg", ">"],
+                \ ["ůh", "#"],
+                \ ["ůi", "*"],
+                \ ["ůj", "<bar>"],
+                \ ["ůk", "\\"],
+                \ ["ůl", "<"],
+                \ ["ůn", "}"],
+                \ ["ům", "~"],
+                \ ["ůp", "%"],
+                \ ["ůq", "'"],
+                \ ["ůr", "^"],
+                \ ["ůs", "$"],
+                \ ["ůt", "<"],
+                \ ["ův", "]"],
+                \ ["ůw", "`"],
+                \ ["ůx", ")"],
+                \ ["ůy", "("],
+                \]
+
+    " In the chech keyborad is already activated
+    if exists("g:czechMapToggled")
+        echo "Czech keyboard"
+        unlet g:czechMapToggled
+
+        for key in keyList
+            exe "silent! unmap " . key[0] 
+            exe "silent! iunmap " . key[0]
+            exe "silent! cunmap " . key[0]
+        endfor
+        silent! iunmap ůů
+
+    else
+        echo "Czech Modified keyboard"
+        let g:czechMapToggled = 1
+
+        for key in keyList
+            exe "nmap " . key[0] . " " . key[1]
+            exe "vmap " . key[0] . " " . key[1]
+            exe "imap " . key[0] . " " . key[1]
+            exe "cmap " . key[0] . " " . key[1]
+        endfor
+        " Pro ůů nechci aby se dělal remap,
+        " protože jinak by ů zase spustilo ů...
+        inoremap ůů ů
+
+    endif
+
+endfunction
+ 
+" Disabled by MH
+" command! CzechMapToggle :call g:czechMapToggle()
+" exe "silent CzechMapToggle"
+
+
+"au InsertLeave * let g:czechMapToggled = 1 | exe "silent CzechMapToggle"
