@@ -17,5 +17,6 @@ hash git >/dev/null 2>&1 && env git clone "$GIT_SOURCE" "$TARGET_DIR" || {
 cd ~
 ln -s $TARGET_DIR/vimrc .vimrc
 
+#Update submodules
 cd $TARGET_DIR
-git submodule init && git submodule update && echo "Updated"
+git submodule init && git submodule update
