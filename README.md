@@ -1,5 +1,7 @@
 # VIM dotfiles
 
+My personal collection of VIM settings.
+
 **Install (fast)**
 
     curl -L https://raw.githubusercontent.com/martin-hoger/.vim/master/bin/install.sh | sh
