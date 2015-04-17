@@ -1,5 +1,5 @@
 function! g:WDeploy(currentFile)
-    let script = "~/.vim/bin/deploy-" . g:ProjConfig['deploy.method'] . ".sh"
+    let script = "~/bin/deploy-" . g:ProjConfig['deploy.method'] . ".sh"
     exe "!" . script . " "
         \ . '"' . a:currentFile . '"' . " "
         \ . '"' . get(g:ProjConfig, 'deploy.server') . '"' . " "
