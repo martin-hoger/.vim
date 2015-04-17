@@ -2,7 +2,7 @@
 
 **Install (fast)**
 
-    curl -L https://raw.githubusercontent.com/martin-hoger/.vim/master/bin/intall.sh | sh
+    curl -L https://raw.githubusercontent.com/martin-hoger/.vim/master/bin/install.sh | sh
 
 **Install (step by step)**
 
