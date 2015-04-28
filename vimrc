@@ -442,6 +442,8 @@ noremap <c-l>  ma>>`a4l
 noremap <c-h>  mb<<`b4h
 vmap <c-l>  >
 vmap <c-h>  <
+inoremap <c-l> <c-d>
+inoremap <c-h> <c-t>
 
 " Camelcase motion
 map <silent> w <Plug>CamelCaseMotion_w
@@ -467,7 +469,7 @@ nnoremap <expr> dd ( !empty(matchstr(getline('.'), '\S')) ? "dd" : '"_dd' )
 map Y y$
     
 "Quickly edit the vimrc file
-nmap <Space>vv :tabe $MYVIMRC<CR>
+nmap <Space>vv :tabnew<CR>:lcd ~/.vim<CR>:e ~/.vim/vimrc<CR>
 "My cheatsheet
 nmap <Space>vc :tabe ~/vim.txt<CR>
 "snippets dir
@@ -499,18 +501,6 @@ nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
 nnoremap <Leader>p p`[v`]=
 nnoremap <Leader>P P`[v`]=
 
-"FuzzyFinder
-let g:fuf_modesDisable = []
-let g:fuf_mrufile_maxItem = 3000
-let g:fuf_mrucmd_maxItem = 3000
-" nnoremap <Space>ff :FufFile **/<CR>
-" nnoremap <Space>fc :FufFile <C-R>=expand("%:p:h") . "/" <CR><CR>
-" nnoremap <Space>fl :FufLine<CR>
-" nnoremap <Space>fb :FufBuffer<CR>
-" nnoremap <Space>fh :FufHelp<CR>
-" nnoremap <Space>fd :FufMruCmd<CR>
-" nnoremap <Space>fm :FufMruFile<CR>
-
 " CtrlP
 nnoremap <Space>ff :CtrlP<CR>
 nnoremap <Space>fc :CtrlP <C-R>=expand("%:p:h") . "/" <CR><CR>
@@ -534,7 +524,7 @@ endif
 " Do not clear filenames cache, to improve CtrlP startup
 " You can manualy clear it by <F5>
 let g:ctrlp_clear_cache_on_exit = 0
-" MRU files
+" MRU files are stored in ~/.cache/ctrlp/mru/cache.txt
 let g:ctrlp_mruf_max = 3000
 " Set no file limit, we are building a big project
 let g:ctrlp_max_files = 0
