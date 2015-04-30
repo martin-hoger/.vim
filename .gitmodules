@@ -151,3 +151,6 @@
 [submodule "bundle/php-refactoring-toolbox"]
 	path = bundle/php-refactoring-toolbox
 	url = https://github.com/adoy/vim-php-refactoring-toolbox
+[submodule "bundle/dockerfile"]
+	path = bundle/dockerfile
+	url = https://github.com/ekalinin/Dockerfile.vim
