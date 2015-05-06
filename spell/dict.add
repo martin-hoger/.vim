@@ -27,3 +27,5 @@ mhoger
 hostname
 php
 fpm
+mysql
+php5
