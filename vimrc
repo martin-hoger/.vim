@@ -742,6 +742,11 @@ imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)"
 \: "\<TAB>"
+
+"Error fix
+"https://github.com/spf13/spf13-vim/issues/539
+" let g:neosnippet#disable_runtime_snippets = 1
+
 "Tell Neosnippet about the other snippets
 let g:neosnippet#snippets_directory='~/.vim/snippets'
 "Ctrl-K Konec - skočí na konec řádku
