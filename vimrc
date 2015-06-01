@@ -21,10 +21,11 @@ set lazyredraw
 "set synmaxcol=128
 set ttyscroll=3
 set ttyfast                   " we have a fast terminal
-" set clipboard=unnamedplus 
-if has('unnamedplus')
-      set clipboard=unnamed,unnamedplus
-endif
+set clipboard=unnamedplus 
+" Didn't work for me, didn't copy between vims and crtl+c a p
+" if has('unnamedplus')
+      " set clipboard=unnamed,unnamedplus
+" endif
 "set iskeyword=@,48-57,192-255
 set iskeyword=@,48-57,_,192-255
 set tabpagemax=150
