@@ -5,6 +5,7 @@ filetype plugin indent on
 let mapleader=","
 let g:mapleader = ","
 
+colorscheme default
 syntax on
 syntax sync minlines=200
 
