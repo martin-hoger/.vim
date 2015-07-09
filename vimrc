@@ -423,7 +423,7 @@ nnoremap <Space>tn :tabnew<CR>
 nnoremap <Space>tt :tab split<CR>
 "nnoremap tn :tabnew \| FufFile **/<CR>
 nnoremap <Space>th :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
-nnoremap <Space>tl :execute 'silent! tabmove ' . tabpagenr()<CR>
+nnoremap <Space>tl :execute 'silent! tabmove ' . (tabpagenr()+1)<CR>
 
 "Map tab to number
 nnoremap <Space>+ 1gt
