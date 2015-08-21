@@ -38,3 +38,8 @@ DNAT
 nat
 Debian
 fieldset
+dicom
+jpg
+dcm
+gz
+gzip
