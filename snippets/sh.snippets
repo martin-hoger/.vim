@@ -61,6 +61,21 @@ alias   script_dir
 alias   SCRIPT_DIR
 	SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # getopt
+snippet args
+alias   getopt
+        # Arguments
+        for i in "$@"
+        do
+                case $i in
+                        --${1}=*)
+                                ${2}="${i#*=}"
+                        ;;
+                        *)
+                                # unknown option
+                        ;;
+                esac
+        done
+#Basic script body
 snippet script
         #!/bin/bash -e
         #    DESCRIPTION, help here
