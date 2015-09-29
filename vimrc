@@ -842,6 +842,18 @@ let g:syntastic_html_checkers=[]
 "There was a conflict with my mapping for Neocomplcache autocomplete.
 let g:AutoPairsMapCR = 0
 
+"Go
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+" let g:go_fmt_command = "goimports"
+let g:syntastic_go_checkers = ['go', 'golint', 'govet']
+let g:syntastic_aggregate_errors = 1
+" let g:syntastic_go_checkers = []
+
+
 "Show syntax highlighting groups for word under cursor
 nmap <Space>vh :call <SID>SynStack()<CR>
 function! <SID>SynStack()
@@ -914,8 +926,12 @@ augroup vimrc_all
     au BufNewFile,BufRead /etc/nginx/* set ft=nginx
     "Jquery syntax highlitings
     au BufNewFile,BufRead jquery.*.js set syntax=jquery
-    " Automaticaly reload css if file changed
+    "Automaticaly reload css if file changed
     au BufNewFile,BufRead *.css silent WatchForChanges 
+    "Go
+    au BufRead,BufNewFile *.go set filetype=go noet ts=4 sw=4 sts=4
+        \| map <buffer> <F5>s :w<CR>:GoRun %%<CR>
+        \| map <buffer> <F5>t :w<CR>:GoTest<CR>
 
     "Text files
     "Adding list bullets automatically:
