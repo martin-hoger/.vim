@@ -157,3 +157,6 @@
 [submodule "bundle/go"]
 	path = bundle/go
 	url = https://github.com/fatih/vim-go
+[submodule "bundle/mustache-handlebars"]
+	path = bundle/mustache-handlebars
+	url = https://github.com/mustache/vim-mustache-handlebars
