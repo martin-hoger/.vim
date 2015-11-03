@@ -751,6 +751,11 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 
 "Tell Neosnippet about the other snippets
 let g:neosnippet#snippets_directory='~/.vim/snippets'
+
+" Disable default snippets which are not installed by default
+" let g:neosnippet#disable_runtime_snippets = 1
+let g:neosnippet#disable_runtime_snippets = { "_": 1, }
+
 "Ctrl-K Konec - skočí na konec řádku
 imap <C-k> <C-g>g
 
