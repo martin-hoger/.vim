@@ -928,6 +928,9 @@ augroup vimrc_all
     au BufNewFile,BufRead *.module set filetype=php
     au BufNewFile,BufRead *.inc set filetype=php
     au BufNewFile,BufRead *.js set filetype=javascript.javascript-jquery
+    " Ember
+    au BufNewFile,BufRead */app/*.js set shiftwidth=2
+        \| set softtabstop=2
     au BufNewFile,BufRead /etc/nginx/* set ft=nginx
     "Jquery syntax highlitings
     au BufNewFile,BufRead jquery.*.js set syntax=jquery
