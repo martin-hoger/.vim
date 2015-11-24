@@ -1,23 +1,33 @@
 snippet ln
+options word
         {{#link-to '${1}'}}${2}{{/link-to}}
 snippet v
+options word
         {{${1}}}${0}
 snippet vr
+options word
         {{{${1}}}}${0}
 snippet vb
+options word
         {{!${1}}}${0}
-snippet if
-        {{#if ${1}}}
-        ${0}
-        {{/if}}
-snippet ife
-        {{#if ${1}}}
-        ${2}
-        {{else}}
-        ${0}
-        {{/if}}
 snippet debugger
         {{debugger}}
 snippet log
         {{log ${1}}}
-
+snippet if
+options word
+        {{#if ${1}}}
+                ${0}
+        {{/if}}
+snippet ife
+options word
+        {{#if ${1}}}
+                ${2}
+        {{else}}
+                ${0}
+        {{/if}}
+snippet each
+options word
+        {{#each ${1} as |${2}|}}
+                ${3}
+        {{/each}}

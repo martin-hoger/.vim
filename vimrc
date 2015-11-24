@@ -931,7 +931,6 @@ augroup vimrc_all
     " Ember
     au BufNewFile,BufRead */app/*.js set shiftwidth=2
         \| set softtabstop=2
-    au BufNewFile,BufRead /etc/nginx/* set ft=nginx
     "Jquery syntax highlitings
     au BufNewFile,BufRead jquery.*.js set syntax=jquery
     "Automaticaly reload css if file changed
@@ -940,6 +939,8 @@ augroup vimrc_all
     au BufRead,BufNewFile *.go set filetype=go noet ts=4 sw=4 sts=4
         \| map <buffer> <F5>s :w<CR>:GoRun %%<CR>
         \| map <buffer> <F5>t :w<CR>:GoTest<CR>
+    " Nginx config
+    au BufNewFile,BufRead /etc/nginx/* set ft=nginx
 
     "Text files
     "Adding list bullets automatically:
