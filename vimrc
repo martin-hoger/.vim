@@ -22,6 +22,7 @@ set lazyredraw
 "set synmaxcol=128
 set ttyscroll=3
 set ttyfast                   " we have a fast terminal
+" set clipboard=unnamed 
 set clipboard=unnamedplus 
 " Didn't work for me, didn't copy between vims and crtl+c a p
 " if has('unnamedplus')
