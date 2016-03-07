@@ -60,7 +60,7 @@ set gdefault                    " the /g flag on :s substitutions by default
 set showcmd " This shows what you are typing as a command.  I love this!
 set showmatch " Show matching brackets when text indicator is over them
 set mat=2 " how many tenths of a second to blink when matching brackets
-set nofoldenable
+set nofoldenable              " start files with folds
 set virtualedit=onemore         " allow for cursor beyond last character
 set spell                       " spell checking on
 set spellfile=~/.vim/spell/dict.add
