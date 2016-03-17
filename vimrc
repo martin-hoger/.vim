@@ -642,12 +642,12 @@ map <C-F5> :e!<CR>
 
 "Debugging
 let g:vdebug_options = {
-        \    "port"               : 9000,
-        \    "server"             : 'localhost',
+        \    "port"               : 49000,
+        \    "server"             : '192.168.1.2',
         \    "timeout"            : 20,
         \    "on_close"           : 'detach',
         \    "break_on_open"      : 0,
-        \    "ide_key"            : '',
+        \    "ide_key"            : 'vim',
         \    "path_maps"          : {},
         \    "debug_window_level" : 0,
         \    "debug_file_level"   : 0,
@@ -658,6 +658,10 @@ let g:vdebug_options = {
         \    "marker_open_tree"   : '▾',
         \    "continuous_mode"    : 1
         \}
+" We need to map local directories to the remote ones.
+let g:vdebug_options["path_maps"] = {
+            \    "/var/www/client": "/home/www/fetview"
+            \}
 let g:vdebug_keymap = {
         \    "run"               : "<F6><F6>",
         \    "set_breakpoint"    : "<F6>p",
