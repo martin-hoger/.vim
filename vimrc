@@ -48,7 +48,7 @@ set whichwrap=b,s,<,>,[,]   " backspace and cursor keys wrap to
 set mouse=v
 "Numbers on the left side, color: gray
 set number
-"set relativenumber
+set relativenumber
 
 set hlsearch
 set nowrap
