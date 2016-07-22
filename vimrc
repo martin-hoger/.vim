@@ -615,7 +615,7 @@ map <F2><CR> :!
 "Zozrazení obsahu registrů
 map <F3>w :set wrap!<CR>
 map <F3>r :set relativenumber!<CR>
-map <F3>n :set number!<CR>
+map <F3>n :set number!<CR>:set relativenumber!<CR>
 map <F3>g :e!<CR>G
 
 "Exit vim
