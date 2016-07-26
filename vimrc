@@ -114,6 +114,7 @@ silent! set undofile
 set viminfo=%100,'100,/100,h,\"500,:100,n~/.viminfo
 "Status line gnarliness
 set laststatus=2
+let g:airline_powerline_fonts = 1
 
 "Activity log directory
 let g:activity_log_location = '~/.vim_backup/activity-log/%Y-%m.log'
