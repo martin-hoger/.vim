@@ -163,3 +163,6 @@
 [submodule "bundle/airline-themes"]
 	path = bundle/airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "bundle/devicons"]
+	path = bundle/devicons
+	url = https://github.com/ryanoasis/vim-devicons
