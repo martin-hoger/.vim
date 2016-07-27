@@ -585,7 +585,7 @@ let NERDTreeShowBookmarks=1
 let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$']
 let NERDTreeChDirMode=0
 let NERDTreeQuitOnOpen=1
-let NERDTreeShowHidden=0
+let NERDTreeShowHidden=1
 let NERDTreeKeepTreeInNewTab=1
 let NERDTreeWinSize=80
 
