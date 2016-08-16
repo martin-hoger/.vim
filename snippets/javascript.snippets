@@ -85,8 +85,10 @@ snippet :f
 		${4}
 	}${3:,}
 # setTimeout function
-snippet timeout
-	setTimeout(function () {${3}}${2}, ${1:10});
+snippet setTimeout
+        setTimeout(function () {
+                ${3}
+        }${2}, 1000);
 # Get Elements
 snippet get
 	getElementsBy${1:TagName}('${2}')${3}
