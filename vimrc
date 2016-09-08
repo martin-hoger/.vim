@@ -36,7 +36,7 @@ set grepprg=ag\ --nogroup\ --nocolor
 
 "Turn on the Wigtd menu (not give everything in autocomplete)
 set wildmenu                    " show list instead of just completing
-set wildmode=longest:full,list:full
+set wildmode=full
 set wildignore=*.swp,*.bak,*.pyc,*.jpg,*.png,*.xcf,*.ttf,*.svg,*.gif
 set wildignorecase
 
