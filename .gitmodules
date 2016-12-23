@@ -169,3 +169,6 @@
 [submodule "bundle/nerdtree-syntax-highlight"]
 	path = bundle/nerdtree-syntax-highlight
 	url = https://github.com/tiagofumo/vim-nerdtree-syntax-highlight
+[submodule "bundle/asyncrun"]
+	path = bundle/asyncrun
+	url = https://github.com/skywind3000/asyncrun.vim
