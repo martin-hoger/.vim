@@ -7,6 +7,10 @@ snippet if
 		${2}
         else
 	fi
+snippet ifrege
+	if [[ "$${1:var}" =~ ".*" ]]; then
+        else
+	fi
 snippet elif
 	elif [[ ${1:condition} ]]; then
 		${2}
