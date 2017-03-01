@@ -1077,6 +1077,14 @@ hi DiffChange   cterm=bold ctermbg=14 guibg=LightMagenta
 hi DiffDelete   cterm=bold ctermfg=12 ctermbg=159 gui=bold guifg=Blue guibg=LightCyan
 hi DiffText     cterm=reverse cterm=bold ctermbg=9 gui=bold guibg=Red
 
+" Fix of error
+hi CtrlPlight_to_CtrlPdark_inactive ctermfg=black ctermbg=white
+hi CtrlPdark_to_CtrlPlight_inactive ctermfg=black ctermbg=white
+hi CtrlPwhite_to_CtrlPlight_inactive ctermfg=black ctermbg=white
+hi CtrlPlight_to_CtrlPwhite_inactive ctermfg=black ctermbg=white
+hi CtrlPdark_to_CtrlPdark_inactive ctermfg=black ctermbg=white
+
+
 "#################################################################################
 "#################################################################################
 
