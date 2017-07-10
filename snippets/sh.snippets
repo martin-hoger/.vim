@@ -127,7 +127,7 @@ snippet sql-query-rows
         DB_ROW=$(echo "SELECT * FROM ${1} WHERE ${2}" | mysql ${3:db} | tail -n 1)
         ROW1=$(echo "$DB_ROW" | cut -f 1)
         ROW2=$(echo "$DB_ROW" | cut -f 2)
-snippet date-timestamp
+snippet date
         date "+%Y-%m-%d %H:%M:%S"
         
         
