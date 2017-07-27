@@ -518,11 +518,8 @@ let g:ctrlp_custom_ignore = {
 	\ 'file': '\v\.(png|jpg|gif)$',
 	\ }
 " PyMatcher for CtrlP
-if !has('python')
-    echo 'In order to use pymatcher plugin, you need +python compiled vim'
-else
-    let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-endif
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+
 " Set delay to prevent extra search
 " MH do i need it?
 " let g:ctrlp_lazy_update = 350
