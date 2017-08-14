@@ -20,6 +20,8 @@ ln -s $TARGET_DIR/vimrc .vimrc
 #Update submodules
 cd $TARGET_DIR
 git submodule init && git submodule update
+git submodule foreach git reset HEAD .
+git submodule foreach git checkout -- .
 
 # Install patched-fonts
 # https://github.com/ryanoasis/nerd-fonts#font-installation
