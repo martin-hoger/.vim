@@ -658,7 +658,8 @@ let g:vdebug_options = {
         \}
 " We need to map local directories to the remote ones.
 let g:vdebug_options["path_maps"] = {
-            \    "/var/www/client": "/home/www/fetview"
+            \    "/var/www/client": "/home/www/fetview",
+            \    "/var/www/vhosts": "/home/www/vhosts"
             \}
 let g:vdebug_keymap = {
         \    "run"               : "<F6><F6>",
