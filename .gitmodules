@@ -166,6 +166,6 @@
 [submodule "bundle/asyncrun"]
 	path = bundle/asyncrun
 	url = https://github.com/skywind3000/asyncrun.vim
-[submodule "ctrlp"]
-	path = ctrlp
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
 	url = https://github.com/ctrlpvim/ctrlp.vim
