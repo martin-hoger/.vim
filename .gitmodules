@@ -139,9 +139,6 @@
 [submodule "bundle/hardtime"]
 	path = bundle/hardtime
 	url = https://github.com/takac/vim-hardtime
-[submodule "bundle/ctrlp"]
-	path = bundle/ctrlp
-	url = https://github.com/ctrlpvim/ctrlp.vim
 [submodule "bundle/ctrl-py-matcher"]
 	path = bundle/ctrl-py-matcher
 	url = https://github.com/FelikZ/ctrlp-py-matcher
@@ -154,9 +151,6 @@
 [submodule "bundle/dockerfile"]
 	path = bundle/dockerfile
 	url = https://github.com/ekalinin/Dockerfile.vim
-[submodule "bundle/go"]
-	path = bundle/go
-	url = https://github.com/fatih/vim-go
 [submodule "bundle/mustache-handlebars"]
 	path = bundle/mustache-handlebars
 	url = https://github.com/mustache/vim-mustache-handlebars
@@ -172,3 +166,6 @@
 [submodule "bundle/asyncrun"]
 	path = bundle/asyncrun
 	url = https://github.com/skywind3000/asyncrun.vim
+[submodule "ctrlp"]
+	path = ctrlp
+	url = https://github.com/ctrlpvim/ctrlp.vim
