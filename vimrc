@@ -844,19 +844,17 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_enable_signs = 1
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
+" let g:syntastic_aggregate_errors = 1
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
-"No checker for HTML
-let g:syntastic_html_checkers=[]
-
-"There was a conflict with my mapping for Neocomplcache autocomplete.
-let g:AutoPairsMapCR = 0
-
+" let g:syntastic_html_checkers=[]
 let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint_d'
-let g:syntastic_aggregate_errors = 1
 
+
+"There was a conflict with my mapping for Neocomplcache autocomplete.
+let g:AutoPairsMapCR = 0
 
 "Show syntax highlighting groups for word under cursor
 nmap <Space>vh :call <SID>SynStack()<CR>
