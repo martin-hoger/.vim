@@ -928,6 +928,8 @@ augroup vimrc_all
     " Ember
     au BufNewFile,BufRead */app/*.js set shiftwidth=2
         \| set softtabstop=2
+    au BufNewFile,BufRead *.hbs set shiftwidth=2
+        \| set softtabstop=2
     "Jquery syntax highlitings
     au BufNewFile,BufRead jquery.*.js set syntax=jquery
     "Automaticaly reload css if file changed
