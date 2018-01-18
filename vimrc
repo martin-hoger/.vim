@@ -852,6 +852,8 @@ let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
+" Kill some go warning, which disturb me in the production
+let g:go_version_warning = 0
 
 "There was a conflict with my mapping for Neocomplcache autocomplete.
 let g:AutoPairsMapCR = 0
