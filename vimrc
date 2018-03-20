@@ -639,6 +639,13 @@ map <F5>l :exec '!'.getline('.')<CR>
 map <C-F5> :e!<CR>
 
 "Debugging
+
+"Disable if python3 is missing...
+if !has("python3")
+    let g:is_vdebug_loaded = 1
+endif
+
+"Default options
 let g:vdebug_options = {
         \    "port"               : 49000,
         \    "server"             : '192.168.1.2',
