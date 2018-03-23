@@ -846,6 +846,9 @@ let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 vmap <expr>  ++  VMATH_YankAndAnalyse()
 nmap         ++  ggVG++
 
+"Browserlink - off
+let g:bl_no_autoupdate = 1
+
 "Syntastic
 let g:syntastic_check_on_open = 1
 let g:syntastic_enable_signs = 1
@@ -1014,8 +1017,8 @@ augroup vimrc_all
     au CmdwinEnter * setlocal nonumber
     "au CmdwinEnter * setlocal nonumber | map <buffer> <F5> <CR>q:
 
-    " Reload page when editing phtml or module file
-    au BufWritePost *.phtml,*.module :BLReloadPage
+    " Browserlink: Reload page when editing phtml or module file
+    " au BufWritePost *.phtml,*.module :BLReloadPage
     " au BufWritePost *.css :BLReloadCSS	
     
     "Opens/closes css block.
