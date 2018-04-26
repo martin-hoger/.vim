@@ -680,7 +680,7 @@ let g:vdebug_keymap = {
         \    "get_context"       : "<F6>c",
         \    "eval_under_cursor" : "<F6>u",
         \}
-let g:vdebug_options['watch_window_style'] = 'compact'
+" let g:vdebug_options['watch_window_style'] = 'compact'
 "let g:vdebug_features['max_depth'] = 2048
 nmap <F6>b :BreakpointRemove *<CR>:Breakpoint<CR>
 nmap <F6>x :BreakpointRemove *<CR>
