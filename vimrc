@@ -541,7 +541,7 @@ endif
 "Comments
 nnoremap <Space>c :TComment<cr>
 vnoremap <Space>c :TComment<cr>
-let g:tcommentMaps = 0
+let g:tcomment_maps = 0
 
 "Easy motion
 nmap s <Plug>(easymotion-s2)
