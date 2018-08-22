@@ -868,6 +868,9 @@ let g:go_version_warning = 0
 "There was a conflict with my mapping for Neocomplcache autocomplete.
 let g:AutoPairsMapCR = 0
 
+"Ember imports
+let g:vim_ember_imports_map = '<Space>e'
+
 "Show syntax highlighting groups for word under cursor
 nmap <Space>vh :call <SID>SynStack()<CR>
 function! <SID>SynStack()
@@ -939,9 +942,10 @@ augroup vimrc_all
     au BufNewFile,BufRead *.js set filetype=javascript.javascript-jquery
     " Ember
     au BufNewFile,BufRead */app/*.js set shiftwidth=2
-        \| set softtabstop=2
+        \| setlocal softtabstop=2
     au BufNewFile,BufRead *.hbs set shiftwidth=2
-        \| set softtabstop=2
+        \| setlocal softtabstop=2
+        \| setlocal commentstring={{!--%s--}}
     "Jquery syntax highlitings
     au BufNewFile,BufRead jquery.*.js set syntax=jquery
     "Automaticaly reload css if file changed
