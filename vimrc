@@ -595,7 +595,7 @@ map <F1>a :!git add %%<CR>
 map <F1>c :Git commit<CR>
 map <F1>C :Git commit -a<CR>
 map <F1>p :Git push<CR>
-map <F1>l :Git pull<CR>
+map <F1>l :Git pull<CR>:Git submodule init<CR>:Git submodule update<CR>
 map <F1>m :MerginalToggle<CR>
 " map <F1>b :Git branch
 " map <F1>h :Git checkout 
