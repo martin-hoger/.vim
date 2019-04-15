@@ -169,3 +169,9 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = https://github.com/ctrlpvim/ctrlp.vim
+[submodule "bundle/javascript-imports"]
+	path = bundle/javascript-imports
+	url = https://github.com/sukima/vim-javascript-imports.git
+[submodule "bundle/vim-ember-imports"]
+	path = bundle/vim-ember-imports
+	url = https://github.com/sukima/vim-ember-imports
