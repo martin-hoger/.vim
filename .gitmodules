@@ -175,3 +175,6 @@
 [submodule "bundle/vim-ember-imports"]
 	path = bundle/vim-ember-imports
 	url = https://github.com/sukima/vim-ember-imports
+[submodule "bundle/twig.vim"]
+	path = bundle/twig.vim
+	url = https://github.com/nelsyeung/twig.vim
