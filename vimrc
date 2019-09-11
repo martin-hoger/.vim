@@ -124,43 +124,43 @@ let g:activity_log_location = '~/.vim_backup/activity-log/%Y-%m.log'
 "http://vimdoc.sourceforge.net/htmldoc/intro.html#keycodes
 
 "Uz zadne sipky  :)
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
+" nnoremap <up> <nop>
+" nnoremap <down> <nop>
+" nnoremap <left> <nop>
+" nnoremap <right> <nop>
+" inoremap <up> <nop>
+" inoremap <down> <nop>
+" inoremap <left> <nop>
+" inoremap <right> <nop>
 
 "I want to swap some keys to deal with my CZ layout
 "noremap z y
 "noremap y z
 
-"Mappuju některé české zmanky, tak abych si ušetřil práci.
-noremap ě @
-noremap ěě @@
-noremap š #
-noremap č $
-noremap ř %
-noremap ž ^
-noremap ý &
-noremap á *
-noremap í {
-noremap é }
-noremap ú (
-"Visal mode
-vnoremap ě @
-vnoremap ěě @@
-vnoremap š #
-vnoremap č $
-vnoremap ř %
-vnoremap ž ^
-vnoremap ý &
-vnoremap á *
-vnoremap í {
-vnoremap é }
-vnoremap ú (
+" "Mappuju některé české zmanky, tak abych si ušetřil práci.
+" noremap ě @
+" noremap ěě @@
+" noremap š #
+" noremap č $
+" noremap ř %
+" noremap ž ^
+" noremap ý &
+" noremap á *
+" noremap í {
+" noremap é }
+" noremap ú (
+" "Visal mode
+" vnoremap ě @
+" vnoremap ěě @@
+" vnoremap š #
+" vnoremap č $
+" vnoremap ř %
+" vnoremap ž ^
+" vnoremap ý &
+" vnoremap á *
+" vnoremap í {
+" vnoremap é }
+" vnoremap ú (
 
 "Quits insert mode
 imap jj <Esc>
@@ -345,10 +345,11 @@ nnoremap <Tab>p :cN<CR>zRzz
 nnoremap <Tab>P :cfirst<CR>zRzz
 nnoremap <Tab>N :clast<CR>zRzz
 "Map cursor keys
-nmap <up> :cN<CR>zRzz
-nmap <down> :cn<CR>zRzz
-nmap <S-up> :cfirst<CR>zRzz
-nmap <S-down> :clast<CR>zRzz
+" nmap <up> :cN<CR>zRzz
+" nmap <down> :cn<CR>zRzz
+" nmap <S-up> :cfirst<CR>zRzz
+" nmap <S-down> :clast<CR>zRzz
+
 "Ctrl+down runs last macro saves and next
 nmap <C-down> @@:w<CR>:cn<CR>zRzz
 "Undo last change
@@ -586,19 +587,20 @@ let NERDTreeShowHidden=1
 let NERDTreeKeepTreeInNewTab=1
 let NERDTreeWinSize=80
 
-"Git status - add, commit, etc..
-map <F1><F1> :Gstatus<CR>15<C-W>+<C-N>
-map <F1>s :Gstatus<CR>15<C-W>+<C-N>
+"Git status - add, commit, etc.. (jako F1)
+map ++ :Gstatus<CR>15<C-W>+<C-N>
+map +s :Gstatus<CR>15<C-W>+<C-N>
 "Adds and commits only current file - good for small fixes.
-map <F1><CR> :!git add %%; git commit<CR>
-map <F1>a :!git add %%<CR>
-map <F1>c :Git commit<CR>
-map <F1>C :Git commit -a<CR>
-map <F1>p :Git push<CR>
-map <F1>l :Git pull<CR>:Git submodule init<CR>:Git submodule update<CR>
-map <F1>m :MerginalToggle<CR>
-" map <F1>b :Git branch
-" map <F1>h :Git checkout 
+map +<CR> :!git add %%; git commit<CR>
+map +a :!git add %%<CR>
+map +c :Git commit<CR>
+map +C :Git commit -a<CR>
+map +p :Git push<CR>
+map +l :Git pull<CR>:Git submodule init<CR>:Git submodule update<CR>
+map +m :MerginalToggle<CR>
+" map +b :Git branch
+" map +h :Git checkout 
+
 
 "shortcut to toggle spelling
 "setup a custom dict for spelling
@@ -606,37 +608,41 @@ map <F1>m :MerginalToggle<CR>
 "zw = mark word as not spelled correctly (remove)
 nmap <leader>s :setlocal spell!<CR>
 
-"Execute last command
-map <F2><F2> :<C-P><CR>
-map <F2><CR> :!
+"Execute last command (jako F2)
+map ěě :<C-P><CR>
+map ě<CR> :!
 
-"Zozrazení obsahu registrů
-map <F3>w :set wrap!<CR>
-map <F3>r :set relativenumber!<CR>
-map <F3>n :set number!<CR>:set relativenumber!<CR>
-map <F3>g :e!<CR>G
+"Zozrazení obsahu registrů (jako F3)
+map šw :set wrap!<CR>
+map šr :set relativenumber!<CR>
+map šn :set number!<CR>:set relativenumber!<CR>
+map šg :e!<CR>G
 
 "Exit vim
 "map <Space><F4> :call g:SessionExecute("SaveSession")<CR>:qa<CR>
-map <Space><F4> :qa<CR>
+map <Space>č :qa<CR>
 "Paste toggle
-map <F4> :set paste!<CR>
-imap <F4> <Esc>:set paste!<CR>gi
+map č :set paste!<CR>
 
 "Deploy
-map <F5><F5> :call g:WDeploy(expand('%:p'))<CR>
-map <F5>p :call g:WDeploy(expand('%:p'))<CR>
+map řř :call g:WDeploy(expand('%:p'))<CR>
+map řp :call g:WDeploy(expand('%:p'))<CR>
 "Run the current file
-map <F5>s :!%:p<CR>
+map řs :!%:p<CR>
 "Run current file in the background
-map <F5>b :Shell! %:p<CR>
+map řb :Shell! %:p<CR>
 "Execute current line in bash
-map <F5>l :exec '!'.getline('.')<CR>
+map řl :exec '!'.getline('.')<CR>
 "Execute the whole contant of the script
-" map <F5>a :exec '!'.getline('.')<CR>
+" map řa :exec '!'.getline('.')<CR>
 
 "Reloads file
-map <C-F5> :e!<CR>
+map řr :e!<CR>
+
+"VMATH count sum of numbers (jako F1)
+vmap <expr>  řa  VMATH_YankAndAnalyse()
+nmap         řa  ggVG++
+
 
 "Debugging
 
@@ -669,27 +675,27 @@ let g:vdebug_options["path_maps"] = {
             \    "/var/www/vhosts": "/home/www/vhosts"
             \}
 let g:vdebug_keymap = {
-        \    "run"               : "<F6><F6>",
-        \    "set_breakpoint"    : "<F6>p",
-        \    "run_to_cursor"     : "<F6>c",
-        \    "step_over"         : "<F6>j",
-        \    "step_into"         : "<F6>l",
-        \    "step_out"          : "<F6>h",
-        \    "close"             : "<F6><cr>",
-        \    "detach"            : "<F6>d",
-        \    "get_context"       : "<F6>c",
-        \    "eval_under_cursor" : "<F6>u",
+        \    "run"               : "žž",
+        \    "set_breakpoint"    : "žp",
+        \    "run_to_cursor"     : "žc",
+        \    "step_over"         : "žj",
+        \    "step_into"         : "žl",
+        \    "step_out"          : "žh",
+        \    "close"             : "ž<cr>",
+        \    "detach"            : "žd",
+        \    "get_context"       : "žc",
+        \    "eval_under_cursor" : "žu",
         \}
 " let g:vdebug_options['watch_window_style'] = 'compact'
 "let g:vdebug_features['max_depth'] = 2048
-nmap <F6>b :BreakpointRemove *<CR>:Breakpoint<CR>
-nmap <F6>x :BreakpointRemove *<CR>
+nmap žb :BreakpointRemove *<CR>:Breakpoint<CR>
+nmap žx :BreakpointRemove *<CR>
 "Insert debug_break() to the file
-"nmap <F6><Space> Oxdebug_break();<Esc>:w<CR>
+"nmap ž<Space> Oxdebug_break();<Esc>:w<CR>
 
 "Opens project
-map <F9><F9> :ProjOpen<CR>
-map <F9>m :ProjMenu<CR>
+map íí :ProjOpen<CR>
+map ím :ProjMenu<CR>
 
 "EvalSelection
 vmap <C-r>= ,eer
@@ -841,10 +847,6 @@ if !exists('g:neocomplete#sources#omni#input_patterns')
       let g:neocomplete#sources#omni#input_patterns = {}
 endif
 let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-
-"VMATH count sum of numbers
-vmap <expr>  ++  VMATH_YankAndAnalyse()
-nmap         ++  ggVG++
 
 "Browserlink - off
 let g:bl_no_autoupdate = 1
