@@ -1006,6 +1006,10 @@ augroup vimrc_all
     au BufEnter *.txt setlocal foldexpr=FoldMarkdownLevel()  
     au BufEnter *.txt setlocal foldmethod=expr
 
+    " Yaml support
+    au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
+    autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
     "Hightlite active window
     " au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
     " au WinLeave * setlocal nocursorline
