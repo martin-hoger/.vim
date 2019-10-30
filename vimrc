@@ -871,7 +871,7 @@ let g:go_version_warning = 0
 let g:AutoPairsMapCR = 0
 
 "Ember imports
-let g:vim_ember_imports_map = '<Space>e'
+let g:vim_ember_imports_map = ',e'
 
 "Show syntax highlighting groups for word under cursor
 nmap <Space>vh :call <SID>SynStack()<CR>
