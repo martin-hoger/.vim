@@ -180,3 +180,10 @@ pimcore
 href
 img
 Kubernetes
+nodeSelector
+matchLabels
+apiVersion
+targetPort
+imagePullPolicy
+containerPort
+kubernetes
