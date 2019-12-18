@@ -187,3 +187,4 @@ targetPort
 imagePullPolicy
 containerPort
 kubernetes
+pimcore
