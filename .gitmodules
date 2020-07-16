@@ -178,3 +178,6 @@
 [submodule "bundle/twig.vim"]
 	path = bundle/twig.vim
 	url = https://github.com/nelsyeung/twig.vim
+[submodule "bundle/apiblueprint.vim"]
+	path = bundle/apiblueprint.vim
+	url = https://github.com/kylef/apiblueprint.vim.git
