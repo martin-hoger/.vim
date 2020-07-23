@@ -5,11 +5,9 @@ snippet #!
 snippet if
 	if [[ ${1:condition} ]]; then
 		${2}
-        else
 	fi
 snippet ifrege
 	if [[ "$${1:var}" =~ ".*" ]]; then
-        else
 	fi
 snippet elif
 	elif [[ ${1:condition} ]]; then
@@ -27,7 +25,6 @@ snippet fori-array
 		${3}
 	done
 snippet wh
-alias while
 	while [[ ${1:condition} ]]; do
 		${2}
 	done
@@ -60,13 +57,10 @@ snippet func
 snippet bc 
         echo $(echo "scale=2; ${1} / ${2}" | bc)
 # Set SCRIPT_DIR variable to directory script is located.
-snippet sdir
-alias   script_dir
-alias   SCRIPT_DIR
+snippet SCRIPT_DIR
 	SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # getopt
-snippet args
-alias   getopt
+snippet getopt
         # Arguments
         for i in "$@"
         do

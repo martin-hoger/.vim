@@ -187,3 +187,6 @@
 [submodule "bundle/nvim-yarp"]
 	path = bundle/nvim-yarp
 	url = https://github.com/roxma/nvim-yarp
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips

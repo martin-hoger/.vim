@@ -748,32 +748,35 @@ silent nmap <Leader>aa mpVka<CR>a`p
   "endif
 "endfunction
 
-"Neosnippet
-"Plugin key-mappings.
-"imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-"smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-"SuperTab like snippets behavior.
-"SuperTab like snippets behavior.
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
+" "Neosnippet
+" "Plugin key-mappings.
+" "imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+" "smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+" "SuperTab like snippets behavior.
+" "SuperTab like snippets behavior.
 " imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 " \ "\<Plug>(neosnippet_expand_or_jump)"
+" \: pumvisible() ? "\<C-n>" : "\<TAB>"
+" " imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+" " \ "\<Plug>(neosnippet_expand_or_jump)"
+" " \: "\<TAB>"
+" smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+" \ "\<Plug>(neosnippet_expand_or_jump)"
 " \: "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
+" 
+" "Error fix
+" "https://github.com/spf13/spf13-vim/issues/539
+" " let g:neosnippet#disable_runtime_snippets = 1
+" 
+" "Tell Neosnippet about the other snippets
+" let g:neosnippet#snippets_directory='~/.vim/snippets'
+" 
+" " Disable default snippets which are not installed by default
+" " let g:neosnippet#disable_runtime_snippets = 1
+" let g:neosnippet#disable_runtime_snippets = { "_": 1, }
 
-"Error fix
-"https://github.com/spf13/spf13-vim/issues/539
-" let g:neosnippet#disable_runtime_snippets = 1
+let g:UltiSnipsEnableSnipMate = 1
 
-"Tell Neosnippet about the other snippets
-let g:neosnippet#snippets_directory='~/.vim/snippets'
-
-" Disable default snippets which are not installed by default
-" let g:neosnippet#disable_runtime_snippets = 1
-let g:neosnippet#disable_runtime_snippets = { "_": 1, }
 
 "Ctrl-K Konec - skočí na konec řádku
 imap <C-k> <C-g>g
@@ -799,31 +802,21 @@ let g:deoplete#enable_at_startup = 1
 "     \ 'scheme' : $HOME.'/.gosh_completions'
 "     \ }
 
-"Define keyword.
-if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns = {}
-endif
-let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-
-"Plugin key-mappings.
-inoremap <expr><C-g>     neocomplete#undo_completion()
-inoremap <expr><C-l>     neocomplete#complete_common_string()
-
-"Recommended key-mappings.
-"<CR>: close popup and save indent.
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-  return neocomplete#close_popup() . "\<CR>"
-  "For no inserting <CR> key.
-  "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
-endfunction
-"<CR>: close popup and save indent.
-inoremap <expr><CR>  pumvisible() ? "\<C-n>" : "\<CR>"
-"<C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-"Close popup by <Space>.
-"inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
+" "Recommended key-mappings.
+" "<CR>: close popup and save indent.
+" inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+" function! s:my_cr_function()
+"   return neocomplete#close_popup() . "\<CR>"
+"   "For no inserting <CR> key.
+"   "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
+" endfunction
+" "<CR>: close popup and save indent.
+" inoremap <expr><CR>  pumvisible() ? "\<C-n>" : "\<CR>"
+" "<C-h>, <BS>: close popup and delete backword char.
+" inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+" inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+" "Close popup by <Space>.
+" "inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
 
 "For cursor moving in insert mode(Not recommended)
 "inoremap <expr><Left>  neocomplete#close_popup() . "\<Left>"
@@ -843,11 +836,15 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 "let g:neocomplete#disable_auto_complete = 1
 " inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
 
-"Enable heavy omni completion.
-if !exists('g:neocomplete#sources#omni#input_patterns')
-      let g:neocomplete#sources#omni#input_patterns = {}
-endif
-let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<c-b>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+" let g:UltiSnipsEditSplit="vertical"
+
+
+
 
 "Browserlink - off
 let g:bl_no_autoupdate = 1
@@ -981,7 +978,7 @@ augroup vimrc_all
     au BufWritePost .vimrc source %
     
     "Autoload new snippets when snippets file is saved.
-    au BufWritePost *.snippets :NeoSnippetSource %
+    " au BufWritePost *.snippets :NeoSnippetSource %
 
     "Better autocomplete
     "Enable omni completion. Not required if they are already set elsewhere in .vimrc
