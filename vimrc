@@ -968,6 +968,9 @@ augroup vimrc_all
         \| setlocal com=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,b:-
         \| setlocal formatoptions=tcroqln
 
+    au BufNewFile,BufRead *.apib setlocal wrap
+        \| setlocal linebreak
+
     " Yaml support
     au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
     autocmd FileType yaml nmap <buffer> řs :!kubectl apply -f %:p<CR>
@@ -1098,6 +1101,11 @@ hi CtrlPdark_to_CtrlPlight_inactive ctermfg=black ctermbg=white
 hi CtrlPwhite_to_CtrlPlight_inactive ctermfg=black ctermbg=white
 hi CtrlPlight_to_CtrlPwhite_inactive ctermfg=black ctermbg=white
 hi CtrlPdark_to_CtrlPdark_inactive ctermfg=black ctermbg=white
+
+" Markdown
+hi markdownH1 ctermfg=red ctermbg=black
+hi markdownH2 ctermfg=green ctermbg=black
+
 
 
 "#################################################################################
