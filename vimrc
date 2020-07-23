@@ -686,6 +686,7 @@ let g:vdebug_keymap = {
         \    "get_context"       : "žc",
         \    "eval_under_cursor" : "žu",
         \}
+
 " let g:vdebug_options['watch_window_style'] = 'compact'
 "let g:vdebug_features['max_depth'] = 2048
 nmap žb :BreakpointRemove *<CR>:Breakpoint<CR>
@@ -782,21 +783,21 @@ imap <C-k> <C-g>g
 
 "Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
-"Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-"Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-"Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-"buffer file name pattern that locks neocomplcache. e.g. ku.vim or fuzzyfinder 
-let g:neocomplete#lock_buffer_name_pattern = '\*fuzzyfinder\*'
-
-"Define dictionary.
-let g:neocomplete#sources#dictionary#dictionaries = {
-    \ 'default' : '',
-    \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'
-    \ }
+"Use deocomplete.
+let g:deoplete#enable_at_startup = 1
+" "Use smartcase.
+" let g:neocomplete#enable_smart_case = 1
+" "Set minimum syntax keyword length.
+" let g:neocomplete#sources#syntax#min_keyword_length = 3
+" "buffer file name pattern that locks neocomplcache. e.g. ku.vim or fuzzyfinder 
+" let g:neocomplete#lock_buffer_name_pattern = '\*fuzzyfinder\*'
+" 
+" "Define dictionary.
+" let g:neocomplete#sources#dictionary#dictionaries = {
+"     \ 'default' : '',
+"     \ 'vimshell' : $HOME.'/.vimshell_hist',
+"     \ 'scheme' : $HOME.'/.gosh_completions'
+"     \ }
 
 "Define keyword.
 if !exists('g:neocomplete#keyword_patterns')
