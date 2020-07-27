@@ -478,8 +478,6 @@ map Y y$
 nmap <Space>vv :tabnew<CR>:lcd ~/.vim<CR>:e ~/.vim/vimrc<CR>
 "My cheatsheet
 nmap <Space>vc :tabe ~/vim.txt<CR>
-"snippets dir
-nmap <Space>vn :tabnew<CR>:CtrlP ~/.vim/snippets/<CR>
 "Hard to remember dir
 nmap <Space>vr :tabnew<CR>:CtrlP ~/Dropbox/!hard-to-remember/<CR>
 
@@ -775,8 +773,6 @@ silent nmap <Leader>aa mpVka<CR>a`p
 " " let g:neosnippet#disable_runtime_snippets = 1
 " let g:neosnippet#disable_runtime_snippets = { "_": 1, }
 
-let g:UltiSnipsEnableSnipMate = 1
-
 
 "Ctrl-K Konec - skočí na konec řádku
 imap <C-k> <C-g>g
@@ -786,8 +782,12 @@ imap <C-k> <C-g>g
 
 "Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
+
 "Use deocomplete.
 let g:deoplete#enable_at_startup = 1
+" If autocomp visible <CR> select first option
+inoremap <expr><CR>  pumvisible() ? "\<C-n>" : "\<CR>"
+
 " "Use smartcase.
 " let g:neocomplete#enable_smart_case = 1
 " "Set minimum syntax keyword length.
@@ -837,12 +837,17 @@ let g:deoplete#enable_at_startup = 1
 " inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
 
 let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<c-tab>"
+
+
 " let g:UltiSnipsJumpForwardTrigger="<c-b>"
 " let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 " let g:UltiSnipsEditSplit="vertical"
 
+"snippets dir
+nmap <Space>vn :tabnew<CR>:CtrlP ~/.vim/UltiSnips/<CR>
 
 
 

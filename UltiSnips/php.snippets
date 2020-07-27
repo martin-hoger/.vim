@@ -283,4 +283,102 @@ snip.rv = re.match(r'.*(?=\.)', fn).group()
 }
 endsnippet
 
+snippet php
+<?php ${1} ?>
+endsnippet
+
+snippet ifh
+<?php if (${1}): ?>
+	${2}
+<?php endif; ?>
+endsnippet
+
+snippet ifeh
+<?php if (${1}): ?>
+	${2}
+<?php else: ?>
+	${3}
+<?php endif; ?
+endsnippet
+
+snippet foreh
+<?php foreach ($${1} as $${2}): ?>
+    ${3}
+<?php endforeach; ?>
+endsnippet
+
+snippet prr
+print_r($${1});
+endsnippet
+
+snippet prr-exit
+print_r($${1}); exit;
+endsnippet
+
+snippet var
+var_dump($${1}); exit;
+endsnippet
+
+snippet varh
+<?php var_dump($${1}); ?>
+endsnippet
+
+snippet varh-exit
+<?php var_dump($${1}); exit; ?>
+endsnippet
+
+snippet this
+$this->${1}
+endsnippet
+
+snippet es
+<?php echo $view->escape(${1}); ?>
+endsnippet
+
+snippet et
+<?php echo t('${1}'); ?>
+endsnippet
+
+snippet watchdog
+watchdog('${1}', 'WD Error: ${2} @var', array('@var' => $${3}), WATCHDOG_ALERT);
+endsnippet
+
+snippet watchdog-export
+watchdog('${1}', 'WD Error: ${2} @var', array('@var' => var_export($${3}, true)), WATCHDOG_ALERT);
+endsnippet
+
+snippet message
+drupal_set_message(t('${1}'));        
+endsnippet
+
+snippet message-error
+drupal_set_message(t('${1}'), 'error');        
+endsnippet
+
+snippet preg_replace
+preg_replace('/${1}/i', '${2}', $${3});
+endsnippet
+
+snippet preg_match
+preg_match('/${1}/i', ${2}, $matches);
+endsnippet
+
+snippet str_replace
+str_replace('${1}', '${2}', $${3});
+endsnippet
+
+snippet db_query
+$result = db_query('SELECT ${1} FROM ${2} WHERE ${3} = "%s"', $${4});
+$rows   = array();
+while ($row = db_fetch_object($result)) {
+    $rows[] = $row;
+}
+endsnippet
+
+snippet db_query_simple
+db_query('UPDATE ${1} SET ${2} = "%s" WHERE ${3} = "%s"', $${4});
+endsnippet
+
+
+
 # :vim:ft=snippets:

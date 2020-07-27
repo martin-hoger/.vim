@@ -92,4 +92,46 @@ while ${2:[[ ${1:condition} ]]}; do
 done
 endsnippet
 
+# Print constant size
+snippet printf
+printf "%-${1}.${1}s" "${2}"
+endsnippet
+
+snippet sed
+| sed -r "s/${1}/${2}/"
+endsnippet
+
+snippet sed-groups
+| sed -r "s/^.*(${1}).*$/\1/"
+endsnippet
+
+snippet awk
+| awk '{print \$1}'
+endsnippet
+
+snippet sql-query
+DB_ROW=$(echo "SELECT * FROM ${1} WHERE ${2}" | mysql ${3:db} | tail -n 1)
+endsnippet
+
+snippet sql-query-rows
+DB_ROW=$(echo "SELECT * FROM ${1} WHERE ${2}" | mysql ${3:db} | tail -n 1)
+ROW1=$(echo "$DB_ROW" | cut -f 1)
+ROW2=$(echo "$DB_ROW" | cut -f 2)
+endsnippet
+
+snippet date
+date "+%Y-%m-%d %H:%M:%S"
+endsnippet
+
+snippet SCRIPT_DIR
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+endsnippet
+
+snippet while-ls
+ls -1 * | while read LINE
+do
+	echo $LINE
+done
+endsnippet
+
 # vim:ft=snippets:
