@@ -83,7 +83,7 @@ snippet pro "Protected function" b
  *
  * @return ${4:void}
  */
-protected function ${1:name}(${2:$param})
+protected function _${1:name}(${2:$param})
 {
 	${VISUAL}${5:return null;}
 }
@@ -96,7 +96,7 @@ snippet pri "Private function" b
  *
  * @return ${4:void}
  */
-private function ${1:name}(${2:$param})
+private function _${1:name}(${2:$param})
 {
 	${VISUAL}${5:return null;}
 }
@@ -287,6 +287,18 @@ snippet php
 <?php ${1} ?>
 endsnippet
 
+snippet func
+${1}function ${2}(${3}) {
+    ${4}
+}
+endsnippet
+
+snippet if
+if (${1}) {
+    ${2}
+}
+endsnippet
+
 snippet ifh
 <?php if (${1}): ?>
 	${2}
@@ -299,6 +311,12 @@ snippet ifeh
 <?php else: ?>
 	${3}
 <?php endif; ?
+endsnippet
+
+snippet fore
+foreach ($${1} as $${2}) {
+    ${3}
+}
 endsnippet
 
 snippet foreh

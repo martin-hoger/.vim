@@ -773,6 +773,11 @@ silent nmap <Leader>aa mpVka<CR>a`p
 " " let g:neosnippet#disable_runtime_snippets = 1
 " let g:neosnippet#disable_runtime_snippets = { "_": 1, }
 
+let g:ultisnips_javascript = {
+      \ 'keyword-spacing': 'always',
+      \ 'semi': 'never',
+      \ 'space-before-function-paren': 'always',
+      \ }
 
 "Ctrl-K Konec - skočí na konec řádku
 imap <C-k> <C-g>g
