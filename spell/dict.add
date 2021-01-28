@@ -228,3 +228,4 @@ grafana
 apiVersion
 local
 yaml
+stringData
