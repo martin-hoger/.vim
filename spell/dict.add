@@ -258,3 +258,10 @@ DoNotSchedule
 imagePullSecrets
 configmap
 vodafone
+chmod
+mkdir
+ansible
+pxc
+proxysql
+profitbricks
+fv
