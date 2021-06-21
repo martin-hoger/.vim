@@ -954,6 +954,7 @@ augroup vimrc_all
     " Ember
     au BufNewFile,BufRead */app/*.js set shiftwidth=2 | setlocal softtabstop=2
     au BufNewFile,BufRead */tests/*.js set shiftwidth=2 | setlocal softtabstop=2
+    au BufNewFile,BufRead *.less set shiftwidth=2
     au BufNewFile,BufRead *.hbs set shiftwidth=2
         \| setlocal softtabstop=2
         \| setlocal commentstring={{!--%s--}}
