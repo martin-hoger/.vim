@@ -1,0 +1,39 @@
+priority -50
+
+snippet if "if"
+{{#if $0}} 
+  $1
+{{/if}}
+endsnippet
+
+snippet ife "if + else"
+{{#if $0}} 
+  $1
+{{else}}
+  $2
+{{/if}}
+endsnippet
+
+snippet log "log"
+{{log $0}}
+endsnippet
+
+snippet dump "dump"
+{{log $0}}
+endsnippet
+
+snippet debugger "debugger"
+{{debugger}}
+endsnippet
+
+snippet each "each"
+{{#each $0 as |$1|}}
+  $2
+{{/each}}
+endsnippet
+
+snippet init
+init() {
+  this._super(...arguments);
+},
+endsnippet

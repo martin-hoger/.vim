@@ -115,9 +115,6 @@
 [submodule "bundle/textobj-variable-segment"]
 	path = bundle/textobj-variable-segment
 	url = https://github.com/Julian/vim-textobj-variable-segment
-[submodule "bundle/tlib"]
-	path = bundle/tlib
-	url = https://github.com/vim-scripts/tlib
 [submodule "bundle/vdebug"]
 	path = bundle/vdebug
 	url = https://github.com/joonty/vdebug
