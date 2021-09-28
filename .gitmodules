@@ -187,3 +187,6 @@
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = https://github.com/SirVer/ultisnips
+[submodule "bundle/deoplete-tabnine"]
+	path = bundle/deoplete-tabnine
+	url = https://github.com/tbodt/deoplete-tabnine

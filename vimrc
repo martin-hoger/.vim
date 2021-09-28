@@ -226,6 +226,14 @@ let g:hardtime_timeout = 1000
 let g:hardtime_maxcount = 2
 let g:hardtime_ignore_quickfix = 1
 
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+" MH: commented out, we do not user it.
+" call plug#begin('~/.vim/plugged')
+
+
+
 "Fold text function
 function! MyFoldText()
     "for now, just don't try if version isn't 7 or higher
@@ -791,8 +799,14 @@ let g:acp_enableAtStartup = 0
 
 "Use deocomplete.
 let g:deoplete#enable_at_startup = 1
-" If autocomp visible <CR> select first option
-inoremap <expr><CR>  pumvisible() ? "\<C-n>" : "\<CR>"
+
+" https://github.com/tbodt/deoplete-tabnine
+call deoplete#custom#var('tabnine', {
+\ 'line_limit': 500,
+\ 'max_num_results': 20,
+\ })
+" https://github.com/Shougo/deoplete.nvim/blob/master/doc/deoplete.txt
+call deoplete#custom#source('ultisnips', 'rank', 9999)
 
 " "Use smartcase.
 " let g:neocomplete#enable_smart_case = 1
@@ -842,7 +856,32 @@ inoremap <expr><CR>  pumvisible() ? "\<C-n>" : "\<CR>"
 "let g:neocomplete#disable_auto_complete = 1
 " inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
 
-let g:UltiSnipsExpandTrigger="<tab>"
+" If list is open and nothing is selected, select first and close, 
+" otherwise only close.
+" inoremap <expr><CR> pumvisible() ? (complete_info().selected == -1 ? '<C-n><C-y>' : '<C-y>') : '<CR>'
+inoremap <expr><CR> pumvisible() ? '<C-n>' : '<CR>'
+inoremap <expr><Space> pumvisible() ? '<C-y> ' : '<Space>'
+" Tab will select first options in the autocomplete list,
+" if snippet selected expand it.
+function! s:SelectNextOrExpandSnippet()
+    if pumvisible()
+        if !empty(v:completed_item)
+            let snippet = UltiSnips#ExpandSnippet()
+            if g:ulti_expand_res > 0
+                return snippet
+            else
+                return "\<C-n>"
+            endif
+        else
+            return "\<C-n>"
+        endif
+    else
+        return "\<TAB>"
+    endif
+endfunction
+inoremap <silent> <TAB> <C-r>=<SID>SelectNextOrExpandSnippet()<CR>
+
+let g:UltiSnipsExpandTrigger="<c-tab" " We need to disable it, it is triggered by SelectNextOrExpandSnippet()
 let g:UltiSnipsListSnippets="<c-tab>"
 
 
