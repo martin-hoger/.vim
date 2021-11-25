@@ -594,8 +594,8 @@ let NERDTreeKeepTreeInNewTab=1
 let NERDTreeWinSize=80
 
 "Git status - add, commit, etc.. (jako F1)
-map ++ :Gstatus<CR>15<C-W>+<C-N>
-map +s :Gstatus<CR>15<C-W>+<C-N>
+map ++ :Git<CR>15<C-W>+<C-N>
+map +s :Git<CR>15<C-W>+<C-N>
 "Adds and commits only current file - good for small fixes.
 map +<CR> :!git add %%; git commit<CR>
 map +a :!git add %%<CR>
