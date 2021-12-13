@@ -991,10 +991,10 @@ augroup vimrc_all
     au BufNewFile,BufRead *.inc set filetype=php
     au BufNewFile,BufRead *.js set filetype=javascript.javascript-jquery
     " Ember
-    au BufNewFile,BufRead */app/*.js set shiftwidth=2 | setlocal softtabstop=2
-    au BufNewFile,BufRead */tests/*.js set shiftwidth=2 | setlocal softtabstop=2
-    au BufNewFile,BufRead *.less set shiftwidth=2
-    au BufNewFile,BufRead *.hbs set shiftwidth=2
+    au BufNewFile,BufRead */app/*.js setlocal shiftwidth=2 | setlocal softtabstop=2
+    au BufNewFile,BufRead */tests/*.js setlocal shiftwidth=2 | setlocal softtabstop=2
+    au BufNewFile,BufRead *.less setlocal shiftwidth=2
+    au BufNewFile,BufRead *.hbs setlocal shiftwidth=2
         \| setlocal softtabstop=2
         \| setlocal commentstring={{!--%s--}}
     "Jquery syntax highlitings
