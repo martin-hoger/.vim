@@ -1053,7 +1053,7 @@ augroup vimrc_all
                 \  nmap <buffer> <Tab><CR> :setlocal nowrapscan<CR>mr?;<CR>j^VN<Tab><CR>`r:silent nohlsearch<CR>
                 \| vmap <buffer> <Tab><CR> :DBExecRangeSQL<CR>:resize 35<CR>
 
-    "Folding for markdown
+    " Folding for markdown
     function! FoldMarkdownLevel()
         if getline(v:lnum) =~ '^## '
             return ">1"
@@ -1062,6 +1062,14 @@ augroup vimrc_all
     endfunction
     au BufEnter *.txt setlocal foldexpr=FoldMarkdownLevel()  
     au BufEnter *.txt setlocal foldmethod=expr
+
+    " Tex markdown syntax
+    au BufEnter *.tex highlight TexHeadline1 cterm=bold ctermfg=112 ctermbg=black
+    au BufEnter *.tex highlight TexHeadline2 cterm=bold ctermfg=115 ctermbg=black
+    au BufEnter *.tex highlight TexHeadline3 cterm=bold ctermfg=130 ctermbg=black
+    au BufEnter *.tex syntax match TexHeadline1 /^\s*#\s\+.*$/
+    au BufEnter *.tex syntax match TexHeadline2 /^\s*##\s\+.*$/
+    au BufEnter *.tex syntax match TexHeadline3 /^\s*###\s\+.*$/
 
     "Hightlite active window
     " au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
