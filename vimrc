@@ -800,13 +800,13 @@ let g:acp_enableAtStartup = 0
 "Use deocomplete.
 let g:deoplete#enable_at_startup = 1
 
-" https://github.com/tbodt/deoplete-tabnine
-call deoplete#custom#var('tabnine', {
-\ 'line_limit': 500,
-\ 'max_num_results': 20,
-\ })
-" https://github.com/Shougo/deoplete.nvim/blob/master/doc/deoplete.txt
-call deoplete#custom#source('ultisnips', 'rank', 9999)
+" " https://github.com/tbodt/deoplete-tabnine
+" call deoplete#custom#var('tabnine', {
+" \ 'line_limit': 500,
+" \ 'max_num_results': 20,
+" \ })
+" " https://github.com/Shougo/deoplete.nvim/blob/master/doc/deoplete.txt
+" call deoplete#custom#source('ultisnips', 'rank', 9999)
 
 " "Use smartcase.
 " let g:neocomplete#enable_smart_case = 1
